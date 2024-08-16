@@ -1,0 +1,30 @@
+# ignore all data files
+*.csv
+*.txt
+*.pkl
+*.pickle
+*.pickle
+fix_log.json
+*.old_cursorrules
+.cursorrules
+.cursorignore
+
+# python files
+*.pyc
+*.pyo
+*.pyd
+*.pyi
+*.pyo
+*.pyc
+
+# ignore the ignore_me folder
+ignore_me/
+
+# ignore the ignore_me folder files
+ignore_me/*
+
+# cache files
+*.cache
+*.cache/
+
+
