@@ -37,7 +37,7 @@ The `fix_log.json` file is the heart of the system’s memory, maintaining:
 
 This file ensures continuity and data-driven decision-making throughout the code fixing process.
 
-## **How It Works**
+## **How It Works (AIM)**
 
 1. **Rule Adherence:** The AI agent (Cursor) reads the `new_cursor_rules` to understand the code fixing strategy.
 2. **Execution:** Upon a suggested or applied fix, `python_executor.py` runs the relevant code and tests.
@@ -52,8 +52,11 @@ This cohesive system creates a feedback loop that allows for continuous, data-dr
 The project is currently in its initial development phase, offering the following workflow:
 
 1. **Test Generation:** A human user instructs the AI agent to generate test cases.
-2. **Log Creation:** The user runs `python_executor.py`, which initializes the `fix_log.json` file.
-3. **Workflow Integration:** With the setup complete, a test-driven development workflow using Cursor becomes possible.
+2. **Log Creation:** The user runs `python_executor.py code_to_fix.py test_code_to_fix.py`, which initializes the `fix_log.json` file.
+3. **Logging:** Instead running the code_to_fix.py file, the user runs `python_executor.py' so an error message from the pair of code_to_fix.py and test_code_to_fix.py is shown. This error message is shared with cursor's chat.
+4. **Debugging:** Cursor's chat suggests a fix for the error message. The user applies it (hopefully with cursor's composer). Then the user runs `python_executor.py` again.
+5. **Iteration:** The process repeats until the code is fully optimized or no further improvements are necessary.
+6. **Workflow Integration:** With the setup complete, a test-driven development workflow using Cursor becomes possible.
 
 While this foundation requires some manual setup, future updates will focus on fully automating the initialization process, further streamlining the entire workflow.
 
