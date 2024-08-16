@@ -1,4 +1,7 @@
 # Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
-new_cursor_rules.md
+# new_cursor_rules.md
 old_cursor_rules.md
-python_executor.py
+# python_executor.py
+buggy_nn_example.py
+buggy_nn_example.backup
+fixed_nn_example.py
